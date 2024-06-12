@@ -1,0 +1,11 @@
+setup.cfg
+setup.py
+Xray/__init__.py
+Xray/exception.py
+Xray/logger.py
+Xray/cloud_storage/__init__.py
+Xray/cloud_storage/s3_operation.py
+xray.egg-info/PKG-INFO
+xray.egg-info/SOURCES.txt
+xray.egg-info/dependency_links.txt
+xray.egg-info/top_level.txt

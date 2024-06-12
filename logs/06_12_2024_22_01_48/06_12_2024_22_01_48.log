@@ -1,0 +1,8 @@
+[ 2024-06-12 22:01:48,708 ] 13 root - INFO - Entered the start_data_ingestion method of TrainPipeline class
+[ 2024-06-12 22:01:48,708 ] 15 root - INFO - Getting the data from S3 bucket
+[ 2024-06-12 22:01:48,708 ] 35 root - INFO - Entered the initiate_data_ingestion method of Data ingestion class
+[ 2024-06-12 22:01:48,708 ] 21 root - INFO - Entered te get_data_from_S3 method of Data Ingestion class
+[ 2024-06-12 22:03:04,080 ] 28 root - INFO - Exited the get_data_from_s3 method of Data ingestion class
+[ 2024-06-12 22:03:04,080 ] 44 root - INFO - Exited the initiate_data_ingestion method of Data ingestion class
+[ 2024-06-12 22:03:04,081 ] 22 root - INFO - Got the train set and test set from S3
+[ 2024-06-12 22:03:04,081 ] 24 root - INFO - Exited the start_data_ingestion method of TrainPipeline class
