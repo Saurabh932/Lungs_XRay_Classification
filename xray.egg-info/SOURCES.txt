@@ -1,3 +1,4 @@
+README.md
 setup.cfg
 setup.py
 Xray/__init__.py
@@ -5,6 +6,19 @@ Xray/exception.py
 Xray/logger.py
 Xray/cloud_storage/__init__.py
 Xray/cloud_storage/s3_operation.py
+Xray/components/__init__.py
+Xray/components/data_ingestion.py
+Xray/components/data_transformation.py
+Xray/components/model_evaluation.py
+Xray/components/model_pusher.py
+Xray/components/model_training.py
+Xray/constant/__init__.py
+Xray/constant/training_pipeline/__init__.py
+Xray/entity/__init__.py
+Xray/entity/artifact_entity.py
+Xray/entity/config_entity.py
+Xray/pipeline/__init__.py
+Xray/pipeline/training_pipeline.py
 xray.egg-info/PKG-INFO
 xray.egg-info/SOURCES.txt
 xray.egg-info/dependency_links.txt
