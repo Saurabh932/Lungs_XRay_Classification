@@ -1,7 +1,8 @@
-artifacts/
+# artifacts/
 credenitals/
 build/
 dist/
 data/
 lungs/
 Documantation.txt
+bentoml_demo/

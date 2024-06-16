@@ -8,8 +8,8 @@ from torchvision import transforms
 from torchvision.datasets import ImageFolder
 
 from Xray.entity.artifact_entity import DataIngestionArtifact 
-from Xray.entity.artifact_entity import DataTransformationArtifacts
-from Xray.entity.config_entity import DataIngestionConfig, DataTransformationConfig
+from Xray.entity.artifact_entity import DataTransformationArtifact
+from Xray.entity.config_entity import DataTransformationConfig
 from Xray.exception import XRayException
 from Xray.logger import logging
 
@@ -32,7 +32,7 @@ class DataTransformation:
                     transforms.Resize(self.data_transformation_config.RESIZE),
                     transforms.CenterCrop(self.data_transformation_config.CENTERCROP),
                     transforms.ColorJitter(**self.data_transformation_config.color_jitter_transforms),
-                    transforms.RandomHorizontalFlip,
+                    transforms.RandomHorizontalFlip(),
                     transforms.RandomRotation(self.data_transformation_config.RANDOMROTATION),
                     transforms.ToTensor(),
                     transforms.Normalize(**self.data_transformation_config.normalize_transforms)
@@ -74,7 +74,8 @@ class DataTransformation:
                                     transform=train_transform
                                     )
             test_data: Dataset = ImageFolder(
-                                    os.path.join(self.data_ingestion_artifcat.test_file_path)
+                                    os.path.join(self.data_ingestion_artifcat.test_file_path),
+                                    transform=test_transform,
                                     )
 
             logging.info("Created train data and test data paths")
@@ -95,7 +96,7 @@ class DataTransformation:
             raise XRayException(e,sys)
         
 
-    def initiate_data_transformation(self) -> DataTransformationArtifacts:
+    def initiate_data_transformation(self) -> DataTransformationArtifact:
         try:
             logging.info("Enter the initiate_data_transformation method of data transformation class")
 
@@ -112,7 +113,7 @@ class DataTransformation:
                                         test_transform = test_transform
                                         )
 
-            data_transformation_artifact: DataTransformationArtifacts = DataTransformationArtifacts(
+            data_transformation_artifact: DataTransformationArtifact = DataTransformationArtifact(
                                                 transformed_train_object = train_loader,
                                                 transformed_test_object = test_loader,
                                                 train_transform_file_path=self.data_transformation_config.train_transforms_file,
