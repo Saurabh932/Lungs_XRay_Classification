@@ -11,7 +11,6 @@ from Xray.entity.config_entity import ModelEvaluationConfig
 from Xray.exception import XRayException
 from Xray.logger import logging
 from Xray.ml.model.architecture import Net
-from bentoml_demo.service import predict
 
 
 class ModelEvaluation:
@@ -25,15 +24,15 @@ class ModelEvaluation:
         self.model_trainer_artifact = model_trainer_artifact
 
     
-    def configuration(self) -> Tuple[DataLoader, Module, float, Optimizer]:
+    def configuration(self) -> Tuple[DataLoader, Module, Optimizer]:
         logging.info("Entered the configuration method of Model evaluation class")
 
         try:
             test_dataloader: DataLoader = {
                 self.data_transformation_artifact.transformed_test_object
             }
-            model: Module = Net()
-            model: Module = torch.load(self.model_trainer_artifact.trained_model_path)
+            # model: Module = Net()             #Method - 01 to call model
+            model: Module = torch.load(self.model_trainer_artifact.trained_model_path)      #Method - 02 to call model
             model.to(self.model_evaluation_config.device)
             cost: Module = CrossEntropyLoss()
 
@@ -104,3 +103,5 @@ class ModelEvaluation:
 
         except Exception as e:
             raise XRayException(e, sys)
+        
+

@@ -66,6 +66,10 @@ GAMMA: int = 0.5
 
 EPOCH: int = 1        # Atleast strat from 500 epoch
 
+
+'''model pusher'''
+
+
 BENTOML_MODEL_NAME: str = "xray_model"
 
 BENTOML_SERVICE_NAME: str = "xray_service"
