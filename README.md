@@ -4,6 +4,10 @@ This project aims to classify lung X-ray images using machine learning. The appl
 
 ---
 
+# Web App Link
+
+link: http://54.152.21.235:8501/
+
 ## Overview
 
 This project uses machine learning models to classify lung X-ray images. It leverages various workflows, components, and pipelines to preprocess data, train models, and make predictions. The project can be deployed on AWS using BentoML for scalable and reliable inference.
@@ -69,9 +73,9 @@ python main.py
 
 **1. Enter the values.**
 
-![](https://github.com/Saurabh932/First-Mlops-Project/blob/main/images/2-predict.jpg)
+![](./images/image_1.png)
 
 
 **2. Click on submit to get final Result**
 
-![](https://github.com/Saurabh932/First-Mlops-Project/blob/main/images/3-predict.jpg)
+![](./images/image_2.png)
