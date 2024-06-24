@@ -63,7 +63,7 @@ python main.py
 - Bootstrap
 - Machine Learning (Scikit-learn, Pandas)
 - Docker
-- AWS
+- AWS (EC2, S# Bucket)
 - BentoML
 
 ---
