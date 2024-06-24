@@ -58,9 +58,7 @@ python main.py
 
 ## Technologies Used
 - Python
-- Flask
-- HTML/CSS
-- Bootstrap
+- Streamlit
 - Machine Learning (Scikit-learn, Pandas)
 - Docker
 - AWS (EC2, S# Bucket)
